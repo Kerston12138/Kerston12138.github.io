@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>复习各种进制转化问题</title>
+      <link href="/2022/01/12/%E5%A4%8D%E4%B9%A0%E5%90%84%E7%A7%8D%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%8C%96%E9%97%AE%E9%A2%98/"/>
+      <url>/2022/01/12/%E5%A4%8D%E4%B9%A0%E5%90%84%E7%A7%8D%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%8C%96%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>-</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>各种进制转化问题 常见的2 10 16 三种进制互相转化。 之前在复习软考的时候全部都学过 不过这个知识倒也不难 就是全都记得不怎么熟了。<br>今天晚上坤坤问我一道计算机组成原理的题目计算寻址地址涉及到进制转换的问题。 我想正好重新全部看一遍。 万一到时候考试的时候老师问到了，这么简单的问题不会算就糟心了。<br>现在坤儿是我的押题之神，他问的题我都最好还是都得搞懂。<br>考研初试前几天 坤儿问我一道哈夫曼编码的算法题 当时我在写数学题，翻了一下书看，复习指导上都不涉及这个算法 只要求计算 不过在自命题试卷中已经有些学校考过这么难的题。心想这么难肯定都超纲了。 结果今年压轴题就是这个 10分 我欲哭无泪。</p><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><blockquote><p>键盘码字不好打 我还是最喜欢原始的手写方式 无可替代的流畅（数位板和apple pencil都不可比）</p></blockquote><ol><li><p><img src="https://img-blog.csdnimg.cn/1548ac5ae5ed4d38ae4418dedc60aca0.png" alt="在这里插入图片描述"></p></li><li><p><img src="https://img-blog.csdnimg.cn/07af66c6cd5d49588fb1189bd604f8ba.png" alt="在这里插入图片描述"></p></li><li><p><img src="https://img-blog.csdnimg.cn/3fa74f90a9b64dacaa584c23c8729361.png" alt="在这里插入图片描述"></p></li><li><p><img src="https://img-blog.csdnimg.cn/45cb7cbc0281416aa663914e9b5eb544.png" alt="在这里插入图片描述"></p></li><li><p><img src="https://img-blog.csdnimg.cn/8568cdfc61d84ca3b983c8f0450330fe.png" alt="在这里插入图片描述"></p></li><li><p><img src="https://img-blog.csdnimg.cn/8abcaac501cd43d8b338e04aa547af7a.png" alt="在这里插入图片描述"></p></li></ol><p>##总结</p><p><strong>最重要也是容易搞混的就是十进制转2、16 以及转回来。</strong></p><blockquote><ul><li>十进制转出去都是 用 除余法 /2/16</li><li>转回来都是用系数乘权重  底数为2、16 幂为序位</li></ul></blockquote><p>以上两句话就是精华之精华</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 锦囊妙计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 进制转化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于markdown编写文档的改进方案</title>
+      <link href="/2022/01/12/%E5%85%B3%E4%BA%8Emarkdown%E7%BC%96%E5%86%99%E6%96%87%E7%AB%A0%E7%9A%84%E6%94%B9%E8%BF%9B/"/>
+      <url>/2022/01/12/%E5%85%B3%E4%BA%8Emarkdown%E7%BC%96%E5%86%99%E6%96%87%E7%AB%A0%E7%9A%84%E6%94%B9%E8%BF%9B/</url>
+      
+        <content type="html"><![CDATA[<h2 id="在markdown上面编写文档的缺点"><a href="#在markdown上面编写文档的缺点" class="headerlink" title="在markdown上面编写文档的缺点"></a>在markdown上面编写文档的缺点</h2><p>   刚开始学习markdown的语法并不复杂但是，看一遍教程就可以了。于是准备着手用现成的vscode编写，但是很快就发现几个严重的缺点，并且不好解决，在vscode上也没有办法解决。</p><ul><li>徒手写中文还要求使用英文符号切换输入法来做标记很不方便</li><li>插入图片过程极其繁琐</li><li>直接在vscode做标记编写没有可视化界面方便</li></ul><h2 id="普通插入图片过程"><a href="#普通插入图片过程" class="headerlink" title="普通插入图片过程"></a>普通插入图片过程</h2><blockquote><p>尤其是插入图片，一直是一个令人头疼的问题。</p><ol><li>当然你可以使用本地相对路径 但是部署到仓库中面临很多问题。诸如仓库空间、带宽缓存、访问速度、部署时间、效率等等因素。 所以用本地的相对路径是不明智的。</li><li>那么就需要使用外链来引用图片了。 <blockquote><p>而使用外链又是一个复杂的问题； </p><ul><li>首先获取图片（本地或者截图）</li><li>上传到服务器</li><li>再获取到他的url拿到链接</li><li>返回编辑器粘贴进去 </li><li><em>那么这就一共需要四个步骤，每引用一张图片都要这样操作，一篇文章下来有太多时间浪费了。</em>*</li></ul></blockquote></li></ol></blockquote><br><h2 id="苦苦寻求solution"><a href="#苦苦寻求solution" class="headerlink" title="苦苦寻求solution"></a>苦苦寻求solution</h2><p>另外一方面寻找靠谱的服务器也是比较费心思的一件事情。后来了解到有一个东西叫做图床。</p><ol><li><p>专门可以把图片转为链接。 进一步了解图床有免费和付费的 比较靠谱也是比较多人选择的七牛图床。新人有免费10G额度 不过注意 这个是流量 而不是容量 很快就用完了。然后你只能付费继续使用，前期已经有很多图片部署到他的服务器了，此时撤走也要费尽一番周折。</p></li><li><p>而其他免费的图床工具就是把图片发给他们服务器返回一个链接给你用。 泄露隐私是其次，最主要是小公司说不定什么时候就跑路或者是倒闭了。 网站的图片链接全军覆没 ，没有图片用户体验大大下降，网站等于废了。</p></li><li><p>一些方案用到贴图的脚本 一键贴图 相当于把上述过程四个步骤打包在一起。做成一个脚本来执行 但是任然是小服务器提供商不靠谱。</p></li></ol><h2 id="最优解来了"><a href="#最优解来了" class="headerlink" title="最优解来了"></a>最优解来了</h2><p>我一直在网上查了好久 有什么更靠谱的方法。<br>后来看到一个高人的妙计，</p><blockquote><p>他说某sdn就是天然的最好的图床工具</p></blockquote><p>重点 画起来 要考<br>哈哈哈哈哈哈，笑死了。<br>直接在csdn上写文章 拿图链接 免费并且靠谱。 某sdn不倒 我的图库就永远存在。<br> 打开编辑器发现csdn居然还支持markdown直接编辑和导出 简直如虎插翅。更令人意外的是 markdown编辑器截图也能类似于脚本那样直接一步到位。 可视化界面也更好操作。<br>其实我现在在写的这篇文章就正是是用csdn写的。<br><img src="https://img-blog.csdnimg.cn/4daf0ad85d614f28b9a313afb35a89e6.png" alt="在这里插入图片描述"></p><h2 id="所以目前我可以断定-某sdn的编辑器-即是最优解（win中）"><a href="#所以目前我可以断定-某sdn的编辑器-即是最优解（win中）" class="headerlink" title="所以目前我可以断定 某sdn的编辑器 即是最优解（win中）"></a>所以目前我可以断定 某sdn的编辑器 即是最优解（win中）</h2><p>另外ios系统就另说了听说是有插件可以支持一键插入图片的</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 锦囊妙计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> markdown </tag>
+            
+            <tag> 优化方案 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>基于hexo框架的搭建过程</title>
+      <link href="/2022/01/12/hexo%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/"/>
+      <url>/2022/01/12/hexo%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="hexo框架的搭建"><a href="#hexo框架的搭建" class="headerlink" title="hexo框架的搭建"></a>hexo框架的搭建</h1><h2 id="写此文章目的"><a href="#写此文章目的" class="headerlink" title="写此文章目的"></a>写此文章目的</h2><p> 对于一个小白来说搭建框架的过程并不难，但是经历坎坷，过程比较多，一不小心弄错了一个步骤就不能成功。自己在搭建的过程中参考了很多文档和教程，但是我认为很多作者写的都不够全面，大多文章只注重强调自己认为重要的，很多过程一笔带过。于是我打算写一篇全面文档来记录搭建过程，一方面是给自己留下资料日后查看，二是也能让大家看到，也能参考一下。</p><br><br><hr><br><br><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul><li>git环境 &emsp;&emsp;  <a href="https://blog.csdn.net/qq_43285335/article/details/90696126">配置教程</a>  </li><li>node.js &emsp;&emsp; <a href="https://www.cnblogs.com/xueweisuoyong/p/11914045.html">安装及配置教程</a></li><li>github注册一个账号 </li></ul><p>前面两个安装环境我就不写了 按照教程一步一步做就好；<br><br><br><br><br></p><hr><p><br><br></p><h2 id="1-github注册账号并新建仓库"><a href="#1-github注册账号并新建仓库" class="headerlink" title="1.github注册账号并新建仓库"></a>1.github注册账号并新建仓库</h2><blockquote><blockquote><ul><li><a href="https://github.com/">github官网</a>  </li></ul></blockquote></blockquote><ul><li><img src="https://img-blog.csdnimg.cn/e1ecd504366b403d8fa4986293c4c095.png"><blockquote><blockquote><ul><li>你可注意创建仓库的名称有命名的要求的<br><br>(username.github.io) &emsp;结构 username是你的用户名称必须要用这个. 后面的.github.io照抄</li></ul></blockquote></blockquote></li></ul><blockquote><blockquote><ul><li>特别说明 以上的这个地址就是你做好网站后的访问链接 别人通过这个网址来访问你的web — <a href="http://www.username.github.io/">www.username.github.io</a></li></ul></blockquote></blockquote><br><br><br><hr><br><br><h2 id="2-安装hexo框架"><a href="#2-安装hexo框架" class="headerlink" title="2.安装hexo框架"></a>2.安装hexo框架</h2><blockquote><blockquote><p>接下来按照此步骤一步一步完成<br>1.新建文件夹 (例如此处我命名为Ablog)<br><img src="https://img-blog.csdnimg.cn/fd31d3d728cb4465bab3d0f5bf561beb.png"><br>说明ablog里面存放所有文件 一会还要在里面创建hexoblog这个文件夹才是你的网站根目录。<br><br><br>2.下载安装hexo-script脚本 在ablog文件夹下右键git bash here 执行命令<br><br><code>curl -O https://cdn.jsdelivr.net/gh/kjhuanhao/hexo-script@master/install.sh</code><br>直接来下载<br><br>如果以上命令不行,可以去<a href="https://github.com/kjhuanhao/hexo-script/releases">github</a>上下载 install.sh文件然后扔到 ablog 文件里面<br><br><br>3. 检查node.js安装配置是否成功<br><code>source install.sh test_node</code><br>在git bash执行上述命令<br><br><br>4.检查git环境配置情况<br><code>source install.sh test_git</code><br>同在git bash执行此命令<br><br><br>5.以上都是前序工作，现在才开始安装hexo.      <code>source install.sh hexo_win</code> 执行此命令安装hexo (在存放install.sh的目录下)<br><br>此时你可以去来一杯卡布奇洛 第一次创建可能需要几分钟左右。<br><br><br>6. <strong>当您看到出现<code>Please run hexo s to check it out!</code>的提示,证明您已经安装成功,此时你可以运行hexo s 然后查看你的博客</strong><br><br><br>7.此时你的ablog文件路径下会多一个hexoblog文件 这就是你的网站代码的根目录。 在bash界面cd hexoblog 进去 执行hexo s (注意要在hexoblog目录执行才有用)<br><br>执行后会显示本地访问链接<code>http://localhost:4000/</code> 你去查看应该是初试化的样子 没有主题<br><br><br>8.至此你的hexo已经安装好了</p></blockquote></blockquote><br><br><hr><br><br><h2 id="3-生成SSH密钥链接到github仓库上"><a href="#3-生成SSH密钥链接到github仓库上" class="headerlink" title="3.生成SSH密钥链接到github仓库上"></a>3.生成SSH密钥链接到github仓库上</h2><blockquote><blockquote><p>1.返回ablog路径 执行命令<code>./install.sh git_ssh</code><br><br><br>可以看到有四条可以执行的命令(其实这个四个操作应该是分别执行四个指令的，但是这个小工具就方便一些 输入序号就可以了)</p></blockquote></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(1)Key</span><br><span class="line">(2)SSH</span><br><span class="line">(3)Verify-github</span><br><span class="line">(4)Verify-coding</span><br></pre></td></tr></table></figure><p><em>分别解释一下作用：<br><br>1、1Key:执行1后可以一键生成秘钥<br>如果你的电脑已经存在秘钥,程序将会自动退出<br><br>2、ssh:执行2查看你的电脑里已经生成的密钥<br><br>3、Verify-github:执行3后可以检查秘钥是否配置github成功<br><br>4、Verify-coding:执行4查看密钥是否配置coding成功 （不过这一步不那么重要 我执行的时候老是报错 也查不到解决方案 直接跳过了 目前看来没有什么影响 可能本来就是配置好的吧）<br><br>按照顺序依次执行上述命令</em></p><blockquote><blockquote><p>2.对于第一步的过程你执行完成1、2拿到密钥之后就先把密钥连上github再去执行3、4检测是否配置成功<br>3.拿到密钥之后执行<code>clip &lt; ~/.ssh/id_rsa.pub</code> 这个命令是复制下你电脑里生成的密钥。<br>4.登陆GitHub,进入你的Account Settings.<br>5.菜单-》ssh keys -》 add ssh keys -》 ctrl+v 把密钥扔进去就行了；<br>6.再返回上一步 用那个执行3、4检查是否配置成功</p></blockquote></blockquote><br><br><hr><br><h2 id="4-准备部署到仓库上"><a href="#4-准备部署到仓库上" class="headerlink" title="4.准备部署到仓库上"></a>4.准备部署到仓库上</h2><blockquote><blockquote><p>1.<code>source install.sh deploy</code> 安装部署工具（一会才能把本地的代码部署到你的github仓库里面才能被别人访问 不然的话在本地就只有你能看见）<br>2.把ablog文件夹里面的up.sh复制一份扔到hexoblog里面<br>3.打开根目录的_config.yml文件 用vscode打开 编辑 拉到最下面 修改deploy</p></blockquote></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: 这里填你的仓库地址,建议使用SSH地址,它是以git开头的</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><blockquote><blockquote><p>4.还是在config.yml文件里面。此处url地址也改为你的仓库地址。 大功告成<br>  <img src="https://img-blog.csdnimg.cn/692e8888b0e848d3b44a496e1a5ace8d.png"><br>5.在hexoblog路径下执行 hexo d 命令就是把项目部署到远程仓库里面去了 此时你去github仓库查看就会多了很多文件。<br>6.访问<a href="https://username.github.io/">https://username.github.io</a>即是你的网站了 可见能够显示初始化界面就证明你已经成功了<br>7.注： 访问<a href="http://localhost:4000/">http://localhost:4000/</a> 与第6步的那个地址有什么区别？显示的界面都一样。 localhost是你的本地预览 你使用hexo s 命令可以在本地预览 但是没有传到远程的仓库中 只有你自己可以在你的电脑上看到更新的效果，所以在开发的过程中 在本地预览就好了 调试好了 一次性部署上去。 而username.github.io这个地址是大家都可以访问的。</p></blockquote></blockquote>  <br>  <br>  <br>  <br><hr><h2 id="5-好了至此hexo框架部署全部结束"><a href="#5-好了至此hexo框架部署全部结束" class="headerlink" title="5. 好了至此hexo框架部署全部结束"></a>5. 好了至此hexo框架部署全部结束</h2><blockquote><blockquote><p>当然这个初始化的界面很简单你们自己敲代码改进或者是用主题来做渲染。 我用的是matery主题比较冷门。 <br><br>   一个hexo部署写了这么久 远远超过我的预期 主题配置的过后再写吧! 今天时间紧促<br><br><br><br></p></blockquote></blockquote><hr><h2 id="6-solution"><a href="#6-solution" class="headerlink" title="6.solution"></a>6.solution</h2><blockquote><blockquote><ol><li><strong>端口占用的情况</strong> 一般会报错导致你在本地生成预览的时候执行hexo s 出错 这个很简单 <code>hexo s -p 5000</code> 用这个命令换个端口就行了。</li></ol></blockquote></blockquote><blockquote><blockquote><ol start="2"><li><strong>URL错误</strong> 这个错误折腾了我好几天。 结果实在没办法只能删了重建。 网上都找不到像我这种错误。 猜测是因为乱搞了进程端口的问题 ，我只是改代码 没动过别的。 之前在本地测试的时候4000的端口老是被占用 然后我查到某个进程在占用，就把它一顿操作。之后好像还是正常的 又过了几个小时候后 hexo s死活都启动不了。<br>最后只能删库重建 卒 重建的时候ssh密钥又配不上又折腾了几天<br><img src="https://img-blog.csdnimg.cn/img_convert/48c43d4a35cb74d61a541f48de44c6c5.png"></li></ol></blockquote></blockquote><blockquote><blockquote><ol start="3"><li><strong>hexo d部署不上去</strong> 我一开始老以为是部署脚本没安装上，删了重装，结果重装又说我npm指令无效 我蒙了啊。 我又去折腾npm 是 git的版本太新了 node.js太旧了 (-!!-)。 再一次删库重建 </li></ol></blockquote></blockquote><blockquote><blockquote><ol start="4"><li><strong>hexo deploy部署到仓库里面却看不见</strong><br><img src="https://img-blog.csdnimg.cn/img_convert/b8b4e330dd4d3562b3833a12f6a24553.png"><br>可以看见 部署过程是顺利 确实都扔上去了<br>但是打开github仓库里面什么都没有。我又懵了好久到处找人问。 最后摸索半天才发现 他扔到master分支里面去了，而不是在main里面。<br>所以我得把master文件转过来 我说实话我也不明白github弄这分支干嘛的。<br><img src="https://img-blog.csdnimg.cn/80c07dfb07be419c8c8a15f2e7e60364.png"><br>但是发现转不过来 奇怪的是我的默认就是设置的main怎么非要扔到master里面去。 于是我删掉master分支 重新hexo deploy 它居然给我创建一个master分支。 吐血。 解决不了了    ——再一次删库重建。</li></ol></blockquote></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 锦囊妙计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> 框架 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>markdown初级教程</title>
+      <link href="/2022/01/11/hexo%E6%A1%86%E6%9E%B6-matery%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/"/>
+      <url>/2022/01/11/hexo%E6%A1%86%E6%9E%B6-matery%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><h4 id="4"><a href="#4" class="headerlink" title="4"></a>4</h4><p><strong>zheshicuti</strong></p><p><strong>youshenmebuyong</strong></p><hr><p><del>这是删除线</del><br>这是分割线</p><p>嵌套列表</p><ol><li>qwe<ul><li>qwe</li><li>ert</li></ul></li><li>23</li></ol><ul><li>qwe</li><li>wer</li></ul><blockquote><p>123</p><blockquote><p>123<br>345</p><blockquote><p>123<br>345  </p></blockquote></blockquote></blockquote><blockquote><blockquote><p>这样就是退出一级标题了<br>123  </p></blockquote></blockquote><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">&#x27;RUNOOB&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p><a href="https://www.baidu.com/">zheshi</a><br>![](D:\Ablog\hexoblog\themes\hexo-theme-matery-master\source\medias\xiangce\1 (3).jpg)</p><table><thead><tr><th align="left">左对齐</th><th align="right">右    对齐</th><th align="center">居中对齐</th></tr></thead><tbody><tr><td align="left">单元格</td><td align="right">单元格</td><td align="center">单元格</td></tr><tr><td align="left">单元格</td><td align="right">单元格</td><td align="center">单元格</td></tr></tbody></table><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">%% 语法示例</span><br><span class="line">        gantt</span><br><span class="line">        dateFormat  YYYY-MM-DD</span><br><span class="line">        title 软件开发甘特图</span><br><span class="line">        section 设计</span><br><span class="line">        需求                      :done,    des1, 2014-01-06,2014-01-08</span><br><span class="line">        原型                      :active,  des2, 2014-01-09, 3d</span><br><span class="line">        UI设计                     :         des3, after des2, 5d</span><br><span class="line">    未来任务                     :         des4, after des3, 5d</span><br><span class="line">        section 开发</span><br><span class="line">        学习准备理解需求                      :crit, done, 2014-01-06,24h</span><br><span class="line">        设计框架                             :crit, done, after des2, 2d</span><br><span class="line">        开发                                 :crit, active, 3d</span><br><span class="line">        未来任务                              :crit, 5d</span><br><span class="line">        耍                                   :2d</span><br><span class="line">        section 测试</span><br><span class="line">        功能测试                              :active, a1, after des3, 3d</span><br><span class="line">        压力测试                               :after a1  , 20h</span><br><span class="line">        测试报告                               : 48h</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 锦囊妙计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> markdown </tag>
+            
+            <tag> 语法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
