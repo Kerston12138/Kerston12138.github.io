@@ -1,1 +1,19 @@
 /* Here is your custom css styles. */
+body {
+    font-family: '微软雅黑';
+}
+
+
+/* webkit, opera, IE9 （谷歌浏览器）*/
+::selection { 
+    background:#42e1d2; 
+    color:white; 
+}
+/* mozilla firefox（火狐浏览器） */
+::-moz-selection { 
+    background:#42e1d2; 
+    color:white; 
+}
+
+
+
